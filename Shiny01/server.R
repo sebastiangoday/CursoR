@@ -2,15 +2,15 @@ function(input, output) {
   
   output$grafica_principal<- renderPlot({
     
-    hist(iris$largoSep,
+    plot(cars$speed,cars$dist,
          probability = TRUE,
          breaks = as.numeric(input$separaciones),
-         xlab = "Duracion (minutos)",
-         main = "Duracion de la erupcion de Geyser")
+         xlab = "Velocidad",
+         main = "Relacion entre velocidad y distancia de frenado",col = "royalblue2")
     
     if (input$osbervaciones_individuales) {
-      rug(iris$largoSep)
-    }
+      #lines(cars$dist) 
+     }
     
     if (input$densidad) {
       dens <- density(iris$largoSep,
