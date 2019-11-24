@@ -2,8 +2,8 @@ bootstrapPage(
   
   selectInput(inputId = "separaciones",
               label = "Numero aproximado de bins en el histograma:",
-              choices = c(10, 20, 35, 50),
-              selected = 20),
+              choices = c(4, 5, 6, 7),
+              selected = 8),
   
   checkboxInput(inputId = "osbervaciones_individuales",
                 label = strong("Mostrar observaciones individuales"),
